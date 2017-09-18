@@ -28,4 +28,16 @@ module RailsDemo
     # Don't generate system test files.
     config.generators.system_tests = nil
   end
+
+  class Application < Rails::Application
+    # Disable generation of helpers, javascripts, css, and view, helper, routing and controller specs
+    config.generators do |generate|
+      generate.helper false
+      generate.assets false
+      generate.view_specs false
+      generate.helper_specs false
+      generate.routing_specs false
+      generate.controller_specs false
+    end
+  end
 end
