@@ -6,7 +6,6 @@ Feature: Create articles
   Background:
     Given I visit the "landing" page
     When I click "new article" link
-
   Scenario: Successfully create an article [Happy Path]
     When I fill in "Title" with "Learning Rails 5"
     And I fill in "Content" with "Excited about learning a new framework"
