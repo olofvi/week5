@@ -10,11 +10,17 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    @article.save
-    redirect_to @article
+    if @article.save
+      binding.pry
+      redirect_to article_path(@article)
+    else
+      flash[:error] = 'Errors when saving article'
+      render :new
+    end
   end
 
   def show
+    binding.pry
     @article = Article.find(params[:id])
   end
 
