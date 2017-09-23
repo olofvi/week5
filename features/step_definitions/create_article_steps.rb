@@ -15,10 +15,6 @@ Then(/^I should be on "([^"]*)" on page$/) do |page|
   expect(page).to eq 'Learning Rails 5'
 end
 
-Then(/^I should see on "([^"]*)" on page$/) do |title|
-  expect(page.title).to eq title
-end
-
 Then(/^show me the page$/) do
   save_and_open_page
 end
