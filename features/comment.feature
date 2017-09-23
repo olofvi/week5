@@ -5,9 +5,7 @@ Feature: Commment on articles
 
   Background:
     Given I am on the "Learning Rails 5" page
-    And I click "Add a Comment" link
 
   Scenario: Successfully create a comment [Happy Path]
     When I fill in "Comment" with "Good stuff!"
-    And I click "Add a Comment" link
     Then I should see on "Good stuff!" on page

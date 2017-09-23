@@ -7,10 +7,8 @@
   <strong>Content:</strong>
   <%= @article.content %>
 </p>
-
-<%= link_to 'Add a comment', comment_path %>
 <h2>Add a comment:</h2>
-<%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+<%= form_with(model: [ @article, @article.comments.build ],) do |form| %>
     <p>
       <%= form.label :commenter %><br>
       <%= form.text_field :commenter %>
