@@ -10,9 +10,13 @@ When(/^I click "([^"]*)" button$/) do |button|
   click_link_or_button button
 end
 
-Then(/^I should be on "([^"]*)" page$/) do |page|
-  #page.current_url == page
-  expect(page.current_url).to eq page
+
+Then(/^I should be on "([^"]*)" on page$/) do |page|
+  expect(page).to eq 'Learning Rails 5'
+end
+
+Then(/^I should see on "([^"]*)" on page$/) do |title|
+  expect(page.title).to eq title
 end
 
 Then(/^show me the page$/) do
