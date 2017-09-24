@@ -8,10 +8,10 @@
   <%= @article.content %>
 </p>
 <h2>Add a comment:</h2>
-<%= form_with(model: [ @article, @article.comments.build ],) do |form| %>
+<%= form_for @article do |form| %>
     <p>
-      <%= form.label :commenter %><br>
-      <%= form.text_field :commenter %>
+      <%= form.label :comments %><br>
+      <%= form.text_field :comments %>
     </p>
     <p>
       <%= form.label :body %><br>
