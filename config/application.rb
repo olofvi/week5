@@ -9,7 +9,7 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
-require "Device"
+require "devise"
 
 Bundler.require(*Rails.groups)
 
