@@ -4,7 +4,8 @@ Feature: Create articles
   I would like to be able to create Articles
 
   Background:
-    Given I am on the landing page
+    Given a user is logged in
+    And I am on the landing page
     And I click "New Article" link
 
   Scenario: Successfully create an article [Happy Path]

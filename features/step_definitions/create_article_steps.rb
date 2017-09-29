@@ -1,3 +1,7 @@
+Given(/^a user is logged in$/) do
+  visit root_path
+end
+
 When(/^I click "([^"]*)" link$/) do |link|
   click_link_or_button link
 end
